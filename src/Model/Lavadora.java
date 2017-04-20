@@ -59,4 +59,14 @@ public class Lavadora extends Electrodomestico{
                 ", secadora=" + secadora +
                 '}';
     }
+
+    public double ingresoTotalLavadoras(Lavadora...lavadoras){
+        double totalIngresoLavadoras = 0.0;
+
+        for (Lavadora lavadora: lavadoras){
+            totalIngresoLavadoras += lavadora.pvp();
+        }
+
+        return totalIngresoLavadoras;
+    }
 }

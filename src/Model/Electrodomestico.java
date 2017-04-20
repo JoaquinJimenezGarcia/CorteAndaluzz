@@ -141,4 +141,53 @@ public abstract class Electrodomestico {
                 ", peso=" + peso +
                 '}';
     }
+
+    public double precioBruto(){
+        double resultado = this.precioBase;
+
+        switch (this.consumoEnergetico){
+            case 'A':
+                resultado += 100.0;
+                break;
+            case 'B':
+                resultado += 80.0;
+                break;
+            case 'C':
+                resultado += 60.0;
+                break;
+            case 'D':
+                resultado += 50.0;
+                break;
+            case 'E':
+                resultado += 30.0;
+                break;
+            case 'F':
+                resultado += 10.0;
+                break;
+            default:
+                break;
+        }
+
+        return resultado;
+    }
+
+    public double precioTransporte(){
+        double precio = 0.0;
+
+        if (peso < 20){
+            precio = 10.0;
+        }else if (peso >= 20 && peso < 50){
+            precio = 50.0;
+        }else if (peso >= 50 && peso < 80){
+            precio = 80.0;
+        }else{
+            precio = 100.0;
+        }
+
+        return precio;
+    }
+
+    public double pvp(){
+        return this.precioBruto() + precioTransporte();
+    }
 }
