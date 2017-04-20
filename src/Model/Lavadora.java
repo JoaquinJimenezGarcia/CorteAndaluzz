@@ -60,7 +60,7 @@ public class Lavadora extends Electrodomestico{
                 '}';
     }
 
-    public double ingresoTotalLavadoras(Lavadora...lavadoras){
+    public static double ingresoTotalLavadoras(Lavadora...lavadoras){
         double totalIngresoLavadoras = 0.0;
 
         for (Lavadora lavadora: lavadoras){

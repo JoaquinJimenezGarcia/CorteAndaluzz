@@ -62,7 +62,7 @@ public class Frigorifico extends Electrodomestico{
                 '}';
     }
 
-    public double ingresoTotalFrigorifico(Frigorifico...frigorificos){
+    public static double ingresoTotalFrigorifico(Frigorifico...frigorificos){
         double ingresoTotalFrigorifico = 0.0;
 
         for (Frigorifico frigorifico: frigorificos){
