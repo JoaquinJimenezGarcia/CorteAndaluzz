@@ -61,4 +61,14 @@ public class Frigorifico extends Electrodomestico{
                 ", caracteristicas=" + Arrays.toString(caracteristicas) +
                 '}';
     }
+
+    public double ingresoTotalFrigorifico(Frigorifico...frigorificos){
+        double ingresoTotalFrigorifico = 0.0;
+
+        for (Frigorifico frigorifico: frigorificos){
+            ingresoTotalFrigorifico += frigorifico.pvp();
+        }
+
+        return ingresoTotalFrigorifico;
+    }
 }
